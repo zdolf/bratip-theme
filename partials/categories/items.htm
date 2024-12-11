@@ -1,0 +1,19 @@
+{% for category in categories %}
+    {% set image = ['reference/kategorie/', category.slug, '.jpg']|join %}
+
+    <div class="category col">
+        <a href="{{ category.url }}" class="text-decoration-none">
+            <p class="img position-relative overflow-hidden rounded-1">
+                <img src="{{ image|media }}" alt="{{ category.name }}" class="img-fluid w-100 rounded-1">
+
+                <span class="overlay position-absolute start-0 top-0 w-100 h-100 d-flex align-items-center justify-content-center">
+                    <i class="ph ph-arrow-circle-up-right icon"></i>
+                </span>
+            </p>
+
+            <h3 class="name fs-2 mb-0 fw-bold text-center">
+                {{ category.name }}
+            </h3>
+        </a>
+    </div>
+{% endfor %}

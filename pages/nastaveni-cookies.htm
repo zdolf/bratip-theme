@@ -1,0 +1,25 @@
+url = "/nastaveni-cookie"
+layout = "default"
+title = "Nastavení cookies"
+
+[cookiesManage cookiesmanage]
+
+[breadcrumbs]
+==
+<div class="container-fluid mt-4">
+    <div class="container-lg">
+        {% component "breadcrumbs" %}
+    </div>
+</div>
+
+<div class="container-fluid py-5" id="post">
+    <div class="container-lg">
+        <h1 class="mb-5">
+            {{ this.page.title }}
+        </h1>
+
+        <div class="content">
+            {% component "cookiesmanage" %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+url = "/co-delame/:slug"
+layout = "default"
+title = "Služba"
+
+[blogPost sluzba]
+slug = "{{ :slug }}"
+categoryPage = "homepage"
+
+[global page_settings]
+handle = "Slider\Settings"
+==
+<?php
+function onInit()
+    {
+        $this["activeMenuItem"] = "references";
+    }
+?>
+==
+<div class="container-fluid py-5" id="post">
+    <div class="container-lg">
+        {% component "sluzba" %}
+    </div>
+</div>

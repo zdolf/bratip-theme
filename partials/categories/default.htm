@@ -1,0 +1,10 @@
+{% set categories = __SELF__.categories.take(4) %}
+
+{% if categories|length > 0 %}
+    <div class="categories row row-cols-1 gy-4 gx-5 row-cols-sm-2 row-cols-lg-4">
+        {% partial __SELF__ ~ "::items"
+            categories = categories
+            currentCategorySlug = __SELF__.currentCategorySlug
+        %}
+    </div>
+{% endif %}

@@ -1,0 +1,43 @@
+url = "/reference/:page?|^[0-9]+$"
+layout = "default"
+title = "Reference"
+
+[blogPosts posts]
+pageNumber = "{{ :page }}"
+postsPerPage = 12
+noPostsMessage = "Nenalezeny žádné příspěvky"
+sortOrder = "published_at asc"
+categoryPage = "novinky"
+postPage = "novinka"
+exceptCategories = "rychle-zpravy"
+
+[staticMenu leftmenu]
+code = "leftmenu"
+==
+<?php
+    function onInit()
+    {
+        $this["activeMenuItem"] = "references";
+    }
+?>
+==
+<div class="container-fluid py-5" id="post">
+    <div class="container-lg pb-xl-4">
+        <h1 class="mb-5">
+            {{ this.page.title }}
+        </h1>
+
+        <div class="row g-5">
+            <div class="sidebar d-none d-xl-block col-xl-3">
+                {% component "leftmenu" %}
+            </div>
+
+            <div class="col col-xl-9">
+
+                <div class="posts row row-cols-1 gy-5 row-cols-sm-2 row-cols-lg-3">
+                    {% component "posts" %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,161 @@
+@import "custom"
+@import "header"
+@import "offcanvas"
+@import "slider"
+@import "footer"
+@import "post"
+@import "content"
+@import "map"
+@import "sidebar"
+@import "breadcrumbs"
+@import "faq"
+@import "quick-news"
+
+header
+    .nav
+        .nav-item
+            .nav-link
+                letter-spacing: 1.5px
+
+.slider-swiper-wrapper, .banner
+    //.gradient
+    //    background: linear-gradient(180deg, transparentize($white, .20) 0%, transparentize($white, 1) 100%)
+    //    z-index: 5
+
+    .info
+        z-index: 7
+        top: 50%
+        transform: translateY(-50%) !important
+        background-color: rgba($primary, .8)
+
+        @include media-breakpoint-up(sm)
+            top: 50%
+
+        //.title
+            letter-spacing: 4px
+
+.claim-swiper
+    padding-bottom: 50px !important
+
+    .swiper-wrapper
+        .swiper-slide
+            letter-spacing: 1px
+
+    .swiper-pagination
+        --swiper-pagination-bottom: 0
+        --swiper-pagination-bullet-inactive-color: #{$brown-300}
+        --swiper-pagination-bullet-inactive-opacity: 1
+        --swiper-theme-color: #{$primary}
+        --swiper-pagination-bullet-horizontal-gap: 8px
+
+        &-bullet
+            &-active
+                outline: 5px solid $brown-200
+
+#cookies-bar
+    border-radius: 0 !important
+
+    @include media-breakpoint-down(md)
+        left: 20px !important
+
+#sg-settings-modal-cookiesbar
+    .modal-dialog
+        .modal-content
+            padding: 40px
+
+            .modal-header
+                padding: 0
+                border-bottom: none
+
+            .modal-body
+                padding: 0
+
+            .modal-footer
+                padding: 0
+                border-top: none
+
+#o-firme
+    .rounded-end-3
+        @include media-breakpoint-down(md)
+            border-top-left-radius: map-get($spacers, 3)
+            border-bottom-left-radius: map-get($spacers, 3)
+
+        @include media-breakpoint-up(md)
+            min-height: 550px
+
+#historie
+    .rounded-start-3
+        @include media-breakpoint-down(md)
+            border-top-right-radius: map-get($spacers, 3)
+            border-bottom-right-radius: map-get($spacers, 3)
+
+        @include media-breakpoint-up(md)
+            min-height: 550px
+
+#reference-categories
+    .categories
+        .category
+            a
+                .img
+                    .overlay
+                        background-color: $post-card-image-overlay-bg
+                        opacity: 0
+                        transition: $transition-base
+
+                        .icon
+                            font-size: $post-card-image-overlay-icon-font-size
+
+                h3
+                    transition: $transition-base
+
+                &:hover
+                    .img
+                        .overlay
+                            opacity: 1
+
+                    h3
+                        color: $primary
+
+.content
+    p
+        margin-bottom: map-get($spacers, 4)
+
+        & + h2
+            margin-top: map-get($spacers, 5)
+
+        & + h3
+            margin-top: map-get($spacers, 5)
+
+        & + h4
+            margin-top: map-get($spacers, 5)
+
+        & + h5
+            margin-top: map-get($spacers, 5)
+
+    h2, h3, h4, h5
+        margin-bottom: map-get($spacers, 4)
+
+    strong
+        font-weight: $post-font-weight-bold
+
+    ul
+        padding-left: 0
+        margin-bottom: map-get($spacers, 4)
+
+        li
+            display: flex
+
+        &:not(.list-unstyled)
+            li
+                list-style-type: none
+
+                &:before
+                    content: "•"
+                    position: relative
+                    margin-right: 10px
+
+#tlakova-zarizeni
+    .col
+        .number
+            width: 50px
+            height: 50px

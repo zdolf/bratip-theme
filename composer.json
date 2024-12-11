@@ -1,0 +1,8 @@
+{
+    "name": "lzaplata/rema-theme",
+    "type": "october-theme",
+    "description": "Company dealing with housing stock management from Trutnov.",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}

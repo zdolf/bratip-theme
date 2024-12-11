@@ -1,0 +1,50 @@
+items:
+    -
+        title: Klempířství
+        nesting: 0
+        type: blog-category
+        code: ''
+        reference: '2'
+        cmsPage: novinky-kategorie
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Opravy památek'
+        nesting: 0
+        type: blog-category
+        code: ''
+        reference: '3'
+        cmsPage: novinky-kategorie
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Hydroizolace
+        nesting: 0
+        type: blog-category
+        code: ''
+        reference: '4'
+        cmsPage: novinky-kategorie
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Pokrývačství
+        nesting: 0
+        type: blog-category
+        code: ''
+        reference: '5'
+        cmsPage: novinky-kategorie
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: 'Left Menu'

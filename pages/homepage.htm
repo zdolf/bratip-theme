@@ -1,0 +1,114 @@
+url = "/"
+layout = "default"
+title = "Úvod"
+seoOptionsMetaTitle = "Truhlářství Bratip"
+seoOptionsEnabledInSitemap = 1
+seoOptionsUseUpdatedAt = 1
+seoOptionsRobotIndex = "index"
+seoOptionsRobotFollow = "follow"
+seoOptionsOgCard = "summary_large_image"
+
+[collection slider]
+handle = "Slider\Slide"
+
+[global slider_settings]
+handle = "Slider\Settings"
+
+[collection partners]
+handle = "Partners\Partner"
+
+[collection portfolio_categories]
+handle = "Portfolio\Category"
+
+[blogPosts services]
+pageNumber = "{{ :page }}"
+categoryFilter = "nase-sluzby"
+postsPerPage = 10
+noPostsMessage = "Nenalezeny žádné příspěvky"
+sortOrder = "published_at asc"
+categoryPage = "homepage"
+postPage = "novinka"
+
+[Gallery gallery]
+gallery = "reference"
+imagesPerPage = 8
+==
+{% if slider.getIterator().count %}
+    <div class="{#container-fluid#} d-block d-md-block"> {# uncomment while slider with horizontal margin #}
+        <div class="slider-swiper-wrapper position-relative {#container-fluid#}"> {# uncomment while slider with horizontal margin #}
+            {% partial "_swiper/slider" slides=slider settings=slider_settings %}
+
+            <div class="gradient position-absolute start-0 top-0 w-100 h-100"></div>
+
+            {#<div class="info position-absolute end-0 p-5 d-none d-md-block rounded-start-2">
+                <p class="title fw-bold fs-1 mb-0 lh-sm text-white">
+                    REMA Trutnov
+                </p>
+
+                <p class="heading h2 mb-0 text-white">
+                    Správa bytového fondu
+                </p>
+            </div>#}
+        </div>
+    </div>
+{% endif %}
+
+{#{% component "quicknews" %}#}
+
+<div class="container-fluid py-5" id="co-delame">
+    <div class="container-lg py-xl-4 content">
+        <h2 class="h1 text-center">
+            Co děláme
+        </h2>
+
+        <div class="services row row-cols-1 g-4 row-cols-sm-2 row-cols-lg-5">
+            {% for post in posts %}
+            <div class="service col {#{ loop.index is odd ? 'odd' : 'even' }#}">
+                <a href="{{ post.url }}" class="px-40 pb-40 pt-3 d-block position-relative h-100">
+                    <p class="img mb-0 d-flex justify-content-center">
+                        {% set image = ["assets/images/services/", post.slug, ".svg"]|join|theme %}
+
+                        <span class="d-block bg-white transition" style="mask-image: url('{{ image }}'); -webkit-mask-image: url('{{ image }}');"></span>
+                    </p>
+
+                    <p class="title mb-0 pt-4 border-2 border-top border-green h2 text-white transition text-center">
+                    <span class="d-inline-block">
+                        {{ post.title }}
+                    </span>
+                    </p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid py-4 ps-md-0 pe-xl-0 overflow-hidden" id="o-firme">
+    <div class="container-fluid ps-md-0 pe-xl-0">
+        <div class="row row-cols-1 row-cols-md-2">
+            <div class="col d-flex col-md-5 col-xl pe-xl-0">
+                <img src="{{ 'assets/images/bratip.jpg'|theme }}" alt="Bratip" class="img-fluid object-fit-md-cover">
+            </div>
+
+            <div class="col mt-4 col-md-7 mt-md-0 d-md-flex align-items-md-center col-xl ps-xl-0">
+                <div class="my-md-4 mx-xl-5 px-xxl-5">
+                    <h2 class="h1 text-center mb-4">
+                        Výroba atipického nábytku Bratip
+                    </h2>
+
+                    {% content "sprava-bytoveho-fondu" %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pt-5" id="portfolio">
+    <div class="container-lg pt-xl-5">
+        <h2 class="h1 text-center mb-4">
+            Pro koho pracujeme
+        </h2>
+
+        {% component "gallery" %}
+    </div>
+</div>

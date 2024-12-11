@@ -1,0 +1,25 @@
+items:
+    -
+        title: 'Nastavení cookies'
+        type: page
+        code: ''
+        reference: '2'
+        cmsPage: page
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: GDPR
+        nesting: null
+        type: page
+        url: null
+        code: ''
+        reference: '1'
+        cmsPage: page
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: Links

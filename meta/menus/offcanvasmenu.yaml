@@ -1,0 +1,56 @@
+items:
+    -
+        title: 'O firmě Rema'
+        type: url
+        url: '#o-firme-rema'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Správa bytového fondu'
+        type: url
+        url: '#sprava-bytoveho-fondu'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Tlaková zařízení'
+        type: url
+        url: '#tlakova-zarizeni'
+        code: references
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Živnostenské listy'
+        type: url
+        url: '#zivnostenske-listy'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Oprávnění k činnosti'
+        type: url
+        url: '#opravneni-k-cinnosti'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Kontakt
+        type: url
+        url: '#kontakt'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: 'Offcanvas Menu'
