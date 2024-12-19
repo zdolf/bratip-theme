@@ -1,7 +1,7 @@
 {
-    "name": "lzaplata/rema-theme",
+    "name": "zdolf/bratip-theme",
     "type": "october-theme",
-    "description": "Company dealing with housing stock management from Trutnov.",
+    "description": "Carpenter from Suchovršice near Trutnov.",
     "require": {
         "composer/installers": "~1.0"
     }

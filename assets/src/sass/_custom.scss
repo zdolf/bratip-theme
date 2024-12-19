@@ -37,7 +37,7 @@ $blue-100:                              #e8f4f7;
 
 $primary:                               $red;
 $secondary:                             $blue-700;
-$dark:                                  $gray-500;
+$dark:                                  shade-color($primary, 50%);
 $light:                                 tint-color($primary, 90%);
 $success:                               $green-500;
 $info:                                  $blue-500;
@@ -255,7 +255,7 @@ $badge-border-radius:                   30px;
 
 $footer-font-size:                      map-get($font-sizes, 5);
 $footer-color:                          $white;
-$footer-bg:                             $primary;
+$footer-bg:                             $dark;
 
 $footer-logo-bg:                        $black;
 $footer-logo-hover-bg:                  $primary;
@@ -272,8 +272,8 @@ $footer-toggler-color:                  $black;
 
 $footer-bottom-bg:                      $footer-bg;
 $footer-bottom-font-size:               $footer-font-size;
-$footer-bottom-color:                   $black;
-$footer-bottom-border-color:            $black;
+$footer-bottom-color:                   $white;
+$footer-bottom-border-color:            $white;
 
 $footer-socials-icon-color:             $white;
 $footer-socials-icon-hover-color:       $black;
@@ -291,12 +291,12 @@ $footer-nav-link-hover-color:           $footer-contact-link-hover-color;
 $footer-nav-link-underline-height:      1px;        // 0 for turn off
 $footer-nav-link-underline-color:       $footer-nav-link-color;
 $footer-nav-link-before-content:        "\e18a";    // none for turn off
-$footer-nav-link-before-color:          $black;
+$footer-nav-link-before-color:          $white;
 $footer-nav-link-before-top:            7px;
 $footer-nav-link-before-font-size:      5px;
 $footer-nav-link-before-font-family:    $font-family-icons-fill;
 
-$footer-heading-color:                  $black;
+$footer-heading-color:                  $white;
 $footer-heading-font-weight:            $font-weight-bold;
 $footer-heading-font-size:              map-get($font-sizes, 2);
 $footer-heading-font-family:            $font-family-base;

@@ -1,9 +1,9 @@
-name: Rema
-description: 'Company dealing with housing stock management from Trutnov.'
-author: 'Lukáš Záplata'
+name: Bratip
+description: 'Carpenter from Suchovršice near Trutnov.'
+author: 'Adam Valenta'
 homepage: ''
-authorCode: LZaplata
-code: rema
+authorCode: Zdolf
+code: bratip
 parent: ''
 database: '0'
 require:
